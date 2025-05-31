@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="portefolio.css">
+    <title>Inscription</title>
+</head>
+<body>
+<header>
+    <div class="inscription">
+        <h1 >FORMULAIRE D'INSCRIPTION</h1>
+        <p>   </p>
+    </div>  
+
+</header>
+<button class="burger"><i class="fa fa-bars " aria-hidden="true"></i></button>
+    <nav class="liens">
+        <a href="portefolio/portefolio.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-home" aria-hidden="true"></i>Accueil</a>
+        <a href="portefolio/Presentation.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-bank" aria-hidden="true"></i>About</a>
+        <a href="#Contacts" rel="noopener noreferrer"><i class="fa fa-address-card" aria-hidden="true"></i> Contact</a>
+        
+    </nav>
+
+<div class="my-form">
+<form action="index2portefolio.html" method="get">
+    <h3>Informations personnelles</h3>
+
+        <input id="nom" type="text" placeholder="Entrez votre nom"><br><br>
+        <input id="mail" type="email" id="email" placeholder="Entrez votre email"><br><br>
+        <input type="password"  id="PW" placeholder="Entrez votre mot de passe"><br><br>
+     Genre   <select name="genre" id="">
+        <option value="F">Feminin</option>
+        <option value="M">Masculin</option>
+    </select><br><br>
+
+    <h3>Selectionnez vos preferences</h3>
+Une couleur <input type="color" name="" id="input-color"><br>
+Musique preferee 
+<input type="checkbox" name="Musique" id="">slow
+<input type="checkbox" name="Musique" id="">rumba <br><br>
+
+
+Une date importante <input type="date" id="" name=""><br>
+Votre langage de programmation
+<input type="radio" name="language" id="">python
+<input type="radio" name="language" id="">java <br><br>
+Chiffre preferé <input type="number" name="" id="" max="15"><br>
+Ajouter un fichier <input type="file" name="" id=""> <br><br>
+
+<button type="submit">Envoyer</button>
+   
+</form>
+        </div>
+
+
+<!-- Autres types de formulaires
+<form action="">
+    <select name="genre" id="">
+        <option value="F"Feminin></option>
+        <option value="M"Masculin></option>
+    </select><br><br>
+   
+    <input type="color" name="" id="">
+    <input type="date" name="" id="">
+    <input type="checkbox" name="" id="">
+   Ajoutez un fichier <input type="file" name="" id=""><br><br> -->
+
+     <footer>
+<h2 >contacts</h2>
+<div class="footer">
+    <p><strong>Email:</strong>  simnicaise2014@gmail.com</p>
+
+<p ><strong>Telephone:</strong> 237 698 09 78 37</p>
+
+<p id="Contacts">2025 Cameroun.Tous droits reservés</p>
+</div>
+
+    </footer> 
+    
+<script>
+
+    let form=document.querySelector(".my-form");  // je trouve l'element
+   form.addEventListener("submit",(e) =>{     //je rattache l'ecouteur d'evenement à mon element  
+    e.preventDefault() // emepeche que la page se charge par defaut
+   // let reponse= prompt("Voulez -vous vraiment envoyer ce formulaire?").
+    let reponse= confirm("Voulez -vous vraiment envoyer ce formulaire?") //la reponse est un booleen
+
+    if(reponse){
+        alert("Le formulaire a été bien envoyé");
+        let nom=document.getElementById("nom").value
+        let email =document.getElementById("mail").value
+        console.log("Ton nom :"+nom ,"\n", "Ton email :"+email);
+    
+        
+    }
+    else{
+        alert("Formulaire non envoyé");
+    }
+   }  )
+
+   let input_color = document.getElementById("input-color")// ici on ne met pas value.on prend juste l'input
+   input_color.addEventListener("change",changeBackground)
+   function changeBackground(e){ 
+   document.body.style.backgroundColor=input_color.value // nouvelle valeur de mon input
+
+   }
+
+</script>
+
+    
+</body>
+</html>

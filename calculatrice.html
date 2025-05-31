@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="portefolio/portefolio.css">
+    <title>Calculatrice avec Javascript</title>
+
+</head>
+
+
+<body>
+
+    <nav class="liens">
+        <a href="portefolio/portefolio.css" target="_blank" rel="noopener noreferrer"><i class="fa fa-home" aria-hidden="true"></i>Accueil</a>
+        <a href="/portefolio/Presentation.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-bank" aria-hidden="true"></i>About</a>
+        <a href="#Contacts" rel="noopener noreferrer"><i class="fa fa-address-card" aria-hidden="true"></i> Contact</a>
+        <a href="formulaire_inscription.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-user-o" aria-hidden="true"></i>Inscription</a>
+        
+         <a href="to_do_list.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-home" aria-hidden="true"></i>To Do List</a>
+    </nav>
+
+ <!--<script >
+    alert("hello");
+</script> -->
+
+
+
+
+<div class="Calculatrice">
+    <h2>Calculatrice</h2>
+<!--On aurait pu faire une calculatrice avec tous les chiffres ou alors mettre deux champs de texte pour que l'utiisateur puisse 
+mettre lui meme les champs qu'il faut.C'est pas la meilleure facon parce que l'utilisateur peut mettre n'importe quoi.
+Mais faisons le pour un debut-->
+
+Nombre 1<input type="number" name="nombre1" id="nombre1">
+Nombre 2<input type="number" name="nombre2" id="nombre2"><br><br>
+
+ <!-- Ces boutons sont utilises pour les facons 2,3 et 4 car la 1ere utilise juste la console 
+ <div>
+        <button onclick="addition()">+</button>
+        <button onclick="soustraction()">-</button>
+        <button onclick="multiplication()">*</button>
+        <button onclick="division()">/</button>
+    </div>
+    <p> Résultat :<i id="résultat"></i></p>
+
+</div>-->
+<!-- Ces boutons sont utilises pour la 5e facon .On crée une fonction calculer-->
+<div>
+        <button onclick="calculer('addition')">+</button>
+        <button onclick="calculer('soustraction')">-</button>
+        <button onclick="calculer('multiplication')">*</button>
+        <button onclick="calculer('division')">/</button>
+    </div>
+    <p> Résultat :<i id="résultat"></i></p>
+
+</div>
+<h2>Types de parametres</h2>
+<h3>Parametres positionnels</h3>
+<p id="para"></p>
+
+<h3>Parametres par defaut</h3>
+<p id="parat">oui</p>
+<script src="calc.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="portefolio.css">
+    <title>ToDO list</title>
+<style>
+        body {
+       /** font-family: 'Segoe UI', sans-serif;
+        background-color: #f5f8fa;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 50px;
+        height: 100vh;*/
+
+         margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: rgb(185, 172, 172);
+
+        }
+
+        .todo-container {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 400px;
+        }
+
+        h2 {
+        text-align: center;
+        margin-bottom: 1rem;
+        }
+
+        #ajouterBouton {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        }
+
+        #ajouterBouton:hover {
+        background-color: #218838;
+        }
+
+        ul#listeTaches {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 1rem;
+        }
+
+        ul#listeTaches li {
+        background: #f1f1f1;
+        margin-bottom: 0.5rem;
+        padding: 0.6rem;
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        }
+
+        #modeBouton {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+        background-color: #a72896;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+<nav class="liens">
+        <a href="portefolio/portefolio.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-home" aria-hidden="true"></i>Accueil</a>
+        <a href="portefolio/Presentation.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-bank" aria-hidden="true"></i>About</a>
+        <a href="#Contacts" rel="noopener noreferrer"><i class="fa fa-address-card" aria-hidden="true"></i> Contact</a>
+        <a href="formulaire_inscription.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-user-o" aria-hidden="true"></i>Inscription</a>
+        <a href="calculatrice.html" target="_blank" rel="noopener noreferrer"><i class="fa fa-home" aria-hidden="true"></i>Calculatrice</a>
+       
+    </nav>
+
+<button id="modeBouton" onclick="changerMode()">Passer en mode sombre</button>
+
+  <div class="todo-container">
+<h2 id="H1ToDoList">Ma Liste de Tâches</h2>
+<input type="text" id="nouvelleTache" placeholder="Nouvelle tâche">
+<button id="ajouterBouton" onclick="ajouter_taches()">Ajouter</button>
+<ul id="listeTaches"></ul>
+  </div>  
+
+
+
+<script>
+// 1)je recupere ma liste de taches donc le contant
+// document.getelementById("listeTaches")
+
+//2)je recupere mon input
+//document.getelementById("nouvelleTache")
+
+//3)je recupere les valeurs de mon input et elles apparaissent dans la console
+// document.getelementById("nouvelleTache").value
+
+//Maintenant il faut recuperer nos elements pour les faire apparraitre 
+
+//4) je crée une variable pour contenir ma liste de taches
+//let liste_de_taches= document.getelementById("listeTaches") ===on verifie que la liste est bien  a l'intérieur de la variable 
+// en saisissant listeTaches dans la console
+
+// 5)  je met la valeur de mon input à l'intérieur d'une variable(creation nouvelle tache)
+//let nouvelleTache=document.getelementById("nouvelleTache").value===en saisissant la variable dans la console 
+// je vais voir apparaitre ce qui aura été saisi dans l'input
+
+// A cette etape on a recuperé le contanant(listeTaches) puis le contenant (nouvelletaches).Maintenant on doit 
+//mettre le contenu dans le contenant.En fait les balises ul n'attendent pas du texte mais plutot des balises li 
+// qui elles attendrons du texte(les nouvelles taches).Javascript a un controle total sur la page html .Elle peut 
+// donc rajouter des éléments qui n'existent pas dans la page html
+//
+
+
+//6)Je rajout les balises li inexistantes à la base
+// let li=document.create.Element("li")
+
+//7)On affecte au li une valeur
+//li.append(nouvelle_tache) et on verifie dans la console en saisissant li
+
+//8)Pour que le li puisse s'afficher dans le ul
+//liste_de_taches.appendchild(li)
+
+// 9)quand on met une nouvelle valeur dans l'input on recrée une nouvelle tache
+//let nouvelleTache=document.getelementById("nouvelleTache").value
+
+//10) je recrée un nouveau li2
+//li2.append(nouvelle_tache)
+
+//11) on affecte au nouveau li;la nouvelle tache
+//liste_de_taches.appendchild(li2)
+
+let liste_de_taches=document.getElementById("listeTaches")// ma liste de taches ou encore 
+// getElelentbyClasseName(ul) oudocument.querySelector("#listeTaches") ou document.querySelector("ul")
+// dans la console pour voir afficher la liste document.getElementById("listeTaches") 
+// ou document.getElementsByTagName("ul")[0]
+let input=document.getElementById("nouvelleTache")//  mon input
+moukate
+function ajouter_taches(){
+    
+// let liste_de_taches=document.getElementById("listeTaches")// ma liste de taches
+// let nouvelle_Tache=document.getElementById("nouvelleTache").value// la valeur de mon input
+let nouvelle_Tache=input.value// la valeur à mon input
+let li=document.createElement("li")//creation de mon li 
+li.append(nouvelle_Tache)// rajouter une nouvelle tache à mon li ou encore 
+// li.textContent = nouvelle_tache.... innerHTML change tous le contenu de ton 
+liste_de_taches.appendChild(li)   //rajouter mon nouveau li à ma liste de taches
+input.value = '' //On efface le texte de l'input après ajout ou encore
+}
+
+// Donc chaque fois que le button ajouter sera cliqué il va appeller la fonction ajouter_taches dans mon script
+//-elle va recuperer la liste de taches (pas obligé de recuperer à chaque fois)
+//-elle va recuperer la nouvelle tache ajoutée avec sa valeur directement
+//-elle va créer une balise li
+//-elle va rajouter la nouvelle tache à la balise li
+//-elle va rajouter notre nouvelle balise li à notre liste de taches(ul)
+//-
+
+
+function changerMode(){
+    document.body.style.backgroundColor="#000"
+    document.body.style.color="fff"
+}
+
+</script>
+</body>
+</html>

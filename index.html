@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma premiere page web</title>
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        p{
+            color: rgb(255, 34, 0);
+            background-color: blueviolet;
+        }
+        img{
+            width: 300px;
+            height: 200px;
+        }
+        .paragraph{
+            text-align: center;
+        }
+        #permier_paragraphe{
+            margin-top: 40 px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <h1>Bienvenu sur ma premiere page web</h1>
+    <p class="paragraph" id="permier_paragraphe">Ceci est mon premier paragraphe</p>
+    <h2>Un sous titre pour organiser le contenu</h2>
+    <p>Il s'agit de <strong> beaux oiseaux</strong> sur cette image. <br>
+    Ou l'as tu <em>trouvée</em>?</p>
+
+
+    <h2>Des images</h2>
+<div class="containeur">
+ <figure id="image1">  
+    <img  src="maison.jpg" alt="ma maison" width="1000" heiht="1000"><!-- les dimensions ici ne comptent 
+    pas  parce qu'il un css defini plus haut -->
+    <figcaption>ma maison</figcaption>
+ </figure> 
+ <figure id="oiseau">
+    <img  src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="mon oiseau" width="20px" heiht="20px">
+    <figcaption>mon oiseau</figcaption>
+</figure>
+
+</div>
+
+<div class="containeur">
+    <figure id="image1">  
+       <img  src="maison.jpg" alt="ma maison" width="1000" heiht="1000"><!-- les dimensions ici ne comptent 
+       pas  parce qu'il un css defini plus haut -->
+       <figcaption>ma maison</figcaption>
+    </figure> 
+    <figure id="oiseau">
+       <img  src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="mon oiseau" width="20px" heiht="20px">
+       <figcaption>mon oiseau</figcaption>
+   </figure>
+   
+   </div>
+
+   <div class="container2">
+    <figure id="image1">  
+       <img  src="maison.jpg" alt="ma maison" width="1000" heiht="1000"><!-- les dimensions ici ne comptent 
+       pas  parce qu'il un css defini plus haut -->
+       <figcaption>ma maison</figcaption>
+    </figure> 
+    <figure id="oiseau">
+       <img  src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" alt="mon oiseau" width="20px" heiht="20px">
+       <figcaption>mon oiseau</figcaption>
+   </figure>
+   
+   </div>
+
+<nav>
+    <a href="page2.html"></a>
+</nav>
+
+<figcaption>Cours python</figcaption>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_TVrC_HCkTE?si=cLsPOcebh8QvbdSb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<!-- les listes-->
+ <h2>Ma liste de courses</h2>
+    <ul>
+        <li>Bouteille d'eau</li>
+        <li>Du lait</li>
+       
+    </ul>
+
+<h2 style="color: red;">TO DO LIST</h2>
+<ol>Maison</ol>
+<ol>Boulot</ol>
+<ol>Dodo</ol>
+
+<!-- les tableaux html-->
+<h3 class="paragraph">tableau recapitulatif</h3>
+<table border="4">
+    <thead>
+        <tr>
+            <th>Competences</th>
+            <th>Niveau</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>HTML/CSS</td>
+            <td>iNTERMEDEIAIRE</td>
+        </tr>
+        <tr>
+            <td>HTML/CSS</td>
+            <td>Avancé</td>
+        </tr>
+        <tr>
+            <td>PYTHON</td>
+            <td>Avancé</td>
+        </tr>
+        <tr>
+            <td colspan="2">PYTHON</td><!-- pour fudionner les lignes c'est rowspan-->
+            
+        </tr>
+    </tbody>
+
+   
+</table>
+
+    <!-- les formulaires  html-->
+    <section>
+        <h2>Contactez nous</h2>
+        <form action="/submit-form" method="post">
+            <label for="nom">Nom</label> <!-- la description  -->
+            <input type="text" id="name"name="name"  required><br><br><!-- le contenu de la cellule-->
+
+            <label for="email">Email</label> 
+            <input type="email" id="email" name="email" required placeholder="simnicaise2014@gmail.com"><br><br>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea><br>
+
+
+            <button type="submit">Valider</button><br>
+<input type="password" id="password" name="password" required>
+        </form>
+     </section> 
+     
+</body> 

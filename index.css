@@ -1,0 +1,85 @@
+
+table{
+    background-color: aquamarine;
+}
+
+/*ul li {
+    padding-left: 100px;
+}
+
+ul >li{
+    text-decoration: line-through;
+}*/
+
+#image1:hover{
+    width: 500px;
+    height: 500px;
+
+}
+.containeur{
+    /*Activer flexbox.Par defaut il aligne les elements sur l'axe horizontal*/
+    display: flex;
+    flex-direction:row;
+    justify-content: center;/* il y start;end;space-between etc*/
+    flex-wrap: wrap;/* flexbox va s'adapter q l'ecran pour avoir un contenu responsive*/
+    gap: 20px;
+}
+
+#image1{
+    
+    order: 2;
+}
+
+#oiseau {
+   
+    order: 1;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Poppins,sans-serif;
+        line-height: 1.6;
+        
+    }
+header,footer{
+    background: #333;
+    color: blanchedalmond;
+    text-align: center;
+
+}
+
+nav ul{
+    
+    list-style: none;/*masque les points sur la liste*/
+    padding: 0;
+    
+}
+
+nav ul li a{
+    margin-right: 50px;
+    text-decoration: none;
+    color: white;
+padding: 0.5em;
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.container2{
+    display: grid;
+
+   grid-template-columns: repeat(3, 1fr);
+grid-gap: 10px; 
+}
+/* on deja 3 pages html accueil,contacts et formulaire d'inscription*/
+
+@media(max-width:768px){
+    nav ul{
+        display: none;/*masque la navigation*/
+    }
+    .hamburger-menu{
+        display: block;/*Affiche l'icône de menu hamburger */   
+    }
+}

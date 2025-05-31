@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculatrice</title>
+
+ <!-- STYLE – mise en forme simple et lisible -->
+  <style>
+ :root {
+      --num-bg: #f1f1f1;/* Couleur de fond des nombres */
+      --num-color: #333;/* Couleur du texte des nombres */
+      --op-bg:  #4a8edd;/* Couleur de fond des opérateurs (+, -, *, /) */
+      --eq-bg:  #28a745; /* Couleur de fond du bouton "=" (égal) */
+      --clr-bg: #dc3545; /* Couleur de fond du bouton de réinitialisation (C/AC) */
+    }
+
+body { 
+    font-family: Arial,sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    margin-top: 100px; 
+}
+
+ #app{ width: 260px; }/*largeur*/
+
+ #ecran {
+     width: 100%;/* Largeur totale du conteneur parent ie "app" */
+     padding: 12px; /* Espace intérieur de 12px */
+     font-size: 1.6rem; /* Taille du texte (équivalent à ~16px si 1rem = 10px) */
+     text-align: right; /* Alignement du texte à droite */
+     border: 1px solid #ccc;/* Bordure grise fine */
+      margin-bottom: 30px;/* Marge basse de 10px pour espacer les éléments */
+      background:#fff; /* Fond blanc */
+    }
+
+/* Grille des boutons */
+ .button {
+     display: grid;
+      gap: 3px;
+     grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur egale pour les chiffres */
+    grid-auto-rows: 60px; /* Hauteur automatique de 60px pour chaque ligne */
+}
+
+ /* Boutons génériques */
+    button { 
+        
+        font-size: 1.4rem;
+         cursor: pointer;
+           border: none; /* Supprime la bordure grise par défaut et permet un design plus moderne*/
+         border-radius: 15px; }/* Coins arrondis .Adoucit l'appararence avec des angles arrondis moins aggressifs
+         que les angles droits*/
+
+/* Chiffres */
+    .num { 
+    background: var(--num-bg);
+     color: var(--num-color);
+     }
+    .num:hover  { 
+        background: #e6e6e6; 
+    }
+/* Opérateurs */
+    .ops {
+     background: var(--op-bg); 
+     color:#fff; 
+    }
+    .ops:hover { 
+        background: #3a78c2; 
+    }
+
+    /* Bouton C et = (placés manuellement en grille) */
+    #clear { background: var(--clr-bg);
+         color:#fff;
+         grid-column: 1 / span 2; 
+        }
+    #clear:hover {
+         background: #23c823; 
+        }
+
+          #equal { 
+            background: var(--eq-bg); 
+            color:#fff;
+             grid-column: 1 / span 3; 
+            
+        }
+      #equal:hover { 
+        background: #218838; 
+    }
+  </style>
+
+
+</head>
+<body>
+        <div id="app">
+ <!-- Écran -->
+  <input type="text" id="ecran" value="" disabled><!-- Disabled rend l'input grisé et n'envoie pas de 
+  valeur dans le formulaire alors que readonly on peut focus et il envoie les valeurs dans le formulaire  -->
+
+  <!-- Clavier -->
+   <div class="button">
+    <!-- ligne chiffres – 0 placé en première colonne pour un effet “pavé” -->
+     <button class="num">0</button>
+<button class="num">1</button><button class="num">2</button><button class="num">3</button>
+<button class="num">4</button><button class="num">5</button><button class="num">6</button>
+<button class="num">7</button><button class="num">8</button><button class="num">9</button>
+
+<!-- opérateurs -->
+ <button class="ops">+</button>
+ <button class="ops">-</button>
+<button class="ops">*</button>
+<button class="ops">/</button>
+
+ <!-- effacer & égal -->
+
+<button id="clear">C</button><!-- pourquoi id et non class -->
+<button id="equal">=</button>
+
+   </div>
+        </div>
+
+        <script>
+/* === Sélection  des éléments === */
+    const ecran  = document.getElementById("ecran");
+    const nums = document.querySelectorAll(".num");// selector se comporte comme css donc une classe 
+    // se recupere avec le point
+    const ops = document.querySelectorAll(".ops");
+    const clearBtn  = document.getElementById("clear");
+    const equalBtn  = document.getElementById("equal");
+
+        </script>
+</body>
+</html>

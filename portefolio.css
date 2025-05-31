@@ -1,0 +1,250 @@
+
+html{
+    scroll-behavior: smooth;/*permet de faire le defilement en douceur sur la page*/
+}
+
+.call-to-action{
+background-color:crimson;
+border-color: white;
+border-radius: 5%;
+color: white;
+font-size: 1.1em;
+font-weight: bold;
+padding: 10px;
+transition: background-color 2s ease, transform 0.3s ease;
+
+}
+
+
+.call-to-action:hover{
+/*font-size: 1.8em;/* j'ai limpression quil a le meme role que transform scale*/
+width: 300px;
+background-color: blueviolet;
+cursor: pointer;
+transform: scale(1.2);/*Légère augmentation de la taille*/
+
+    }
+
+
+
+
+header{
+    justify-content: center;
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+    main{/* ca ne marche pas*/
+        background-color: red;
+    }
+
+}
+h1{
+    background-color: blueviolet;
+    width: 500px;
+    border: none;
+    border-radius: 5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+    
+
+.overlay{
+display: flex;
+flex-direction: column;
+background-color: rgba(0, 0, 0, 0.41);
+height: 85%;
+justify-content: center;
+align-items: center;
+padding: 2rem;
+   
+}
+
+.liens{
+    background-color: rgb(94, 11, 11);
+    display: flex;
+    justify-content: center;
+
+    
+}
+.liens a {
+    font-size: 90%;
+    padding: 0.5rem;
+    margin-right: 30px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 2s ease;
+}
+.liens a i{
+    margin-right: 2px;
+}
+.liens a:hover{
+    background-color: blue;
+    transform: scale(1.05);
+  
+}
+.burger{
+    display: none;/* display none masque les elements en libérant l'espace*/
+    font-size: 2rem;
+    background : none;
+    border: none;
+   cursor: pointer;
+   margin-top: 1rem;
+}
+@media (max-width: 768px) {
+    .burger{/* ca ne s'affiche que sur la page accueil* et non sur les deux autres*/
+        display: block;
+    }
+    .liens{
+        display: none;
+    }
+    body{
+        width: auto;
+    }
+    
+    p{
+        line-height: 1.7;/*ca ne marche pas*/
+        max-width: 100%;
+        column-width: auto;
+
+    }
+    .container_image{
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));/*ca ne marche pas*/
+    }
+    
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: rgb(185, 172, 172);
+
+   
+}
+
+h2{
+    
+    text-align: center;
+    text-transform: uppercase;
+    color: brown;
+    font-weight: 800;
+}
+.paragraphe p{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(161, 118, 202);
+    border-color: brown;
+    width: 50%;
+    border-radius: 5%;
+   text-align: justify;
+   padding: 20px;   
+   margin: auto;/*il centre automatiquement l'element sur la page web*/
+
+}
+
+
+
+
+
+h3{
+    text-align: center;
+}
+
+img{
+   
+   /*width: 300px;
+    height: 250px;*/
+    cursor: pointer;
+
+   /* je n'arrive pas à reduire les espaces entre les images*/
+
+
+}
+
+ img:hover{
+transform: scale(1.2);
+   /* width: 400px; j'ai remplacé avec transform
+    height: auto;*/
+    transition: 0.4s;
+
+}
+.container_image{
+   /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+   display: grid;
+    grid-template-columns: repeat(2, 1fr);
+   /*  grid-auto-rows: 5px; */  
+
+}
+
+.footer{
+text-align: center;
+background-color: rgb(105, 105, 105);
+color: white;
+height: 18vh;
+align-content: center;
+
+}
+
+
+/***** INSCRIPTION******/
+
+.inscription{/* jai du ajouter un paragraph vide pour centrer h1 dans le header du formulaire*/
+    display: flex;
+    justify-content: center;
+    padding: 150px;
+
+}
+
+.my-form{
+   /** display: flex;
+    flex-direction: columns;
+    justify-content: center;
+    margin-top: 5px;*/
+
+     background: #fff;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        width: 100%;
+        max-width: 400px;
+
+
+}
+label{
+    color: blue;
+}
+
+/*********PRESENTATION*******/
+
+    .image_etoua{
+        display: flexbox;
+        flex-direction: row;
+    }
+.main_presentation{
+
+    justify-items: center;
+
+}
+li a:hover{
+    background-color: blue;
+    color: white;
+}
+
+.element{
+    display: grid;
+    grid-template-columns:(200px 200px 200px);
+    grid-template-rows: (200px 200px);
+    background-color: blueviolet;
+
+}
+
+/* portefolio;presentation;css=====portefolio
+formulaire,calculatrice,todolist====premier projet*/
